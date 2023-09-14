@@ -133,7 +133,6 @@ class RegisterScreen extends StatelessWidget {
                     const SizedBox(height: 20),
                     // Button "SIGN UP" -------------
                     Container(
-                      height: 50,
                       width: width,
                       decoration: const BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(50)),
@@ -153,7 +152,7 @@ class RegisterScreen extends StatelessWidget {
                         style: TextButton.styleFrom(
                             foregroundColor: Colors.white,
                             padding:
-                                const EdgeInsets.symmetric(vertical: 17.0)),
+                                const EdgeInsets.symmetric(vertical: 20.0)),
                         child: const Text(
                           'SIGN UP',
                           style: TextStyle(
@@ -246,15 +245,6 @@ class RegisterScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    // ElevatedButton.icon(
-                    //   onPressed: () {},
-                    //   icon: Image.asset(
-                    //     'assets/icons/icon_google.png',
-                    //     width: 24,
-                    //     height: 24,
-                    //   ),
-                    //   label: const Text('Sign Up with Google'),
-                    // ),
                     const SizedBox(height: 100),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
