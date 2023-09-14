@@ -132,35 +132,34 @@ class RegisterScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 20),
                     // Button "SIGN UP" -------------
-                    Container(
-                      width: width,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(50)),
-                        gradient: LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: [Color(0xFF11A8FF), Color(0xFFFF00FF)]),
-                      ),
-                      child: Center(
-                          child: TextButton(
-                        onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) {
-                            return const MainApp();
-                          }));
-                        },
-                        style: TextButton.styleFrom(
-                            foregroundColor: Colors.white,
-                            padding:
-                                const EdgeInsets.symmetric(vertical: 15.0)),
-                        child: const Text(
-                          'SIGN UP',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700,
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return const MainApp();
+                        }));
+                      },
+                      child: Container(
+                        width: width,
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(50)),
+                          gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [Color(0xFF11A8FF), Color(0xFFFF00FF)]),
+                        ),
+                        child: const Center(
+                          child: Text(
+                            'SIGN UP',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700,
+                            ),
                           ),
                         ),
-                      )),
+                      ),
                     ),
                     const SizedBox(height: 20),
                     // Text Or Sign Up with ----------
@@ -196,32 +195,34 @@ class RegisterScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 20),
                     // Button Sign Up with Google -----------
-                    Center(
-                      child: Container(
-                        width: width,
-                        padding: const EdgeInsets.symmetric(vertical: 12),
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(colors: [
-                            Color.fromARGB(64, 17, 168, 255),
-                            Color.fromARGB(64, 255, 0, 255)
-                          ]),
-                          borderRadius: BorderRadius.all(Radius.circular(50)),
-                          border: GradientBoxBorder(
-                            gradient: LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [Color(0xFF11A8FF), Color(0xFFFF00FF)]),
-                            width: 1,
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return const MainApp();
+                        }));
+                      },
+                      child: Center(
+                        child: Container(
+                          width: width,
+                          padding: const EdgeInsets.symmetric(vertical: 12),
+                          decoration: const BoxDecoration(
+                            gradient: LinearGradient(colors: [
+                              Color.fromARGB(64, 17, 168, 255),
+                              Color.fromARGB(64, 255, 0, 255)
+                            ]),
+                            borderRadius: BorderRadius.all(Radius.circular(50)),
+                            border: GradientBoxBorder(
+                              gradient: LinearGradient(
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                  colors: [
+                                    Color(0xFF11A8FF),
+                                    Color(0xFFFF00FF)
+                                  ]),
+                              width: 1,
+                            ),
                           ),
-                        ),
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return const MainApp();
-                            }));
-                          },
-                          splashColor: const Color.fromARGB(68, 33, 149, 243),
                           child: Center(
                             child:
                                 Row(mainAxisSize: MainAxisSize.min, children: [
