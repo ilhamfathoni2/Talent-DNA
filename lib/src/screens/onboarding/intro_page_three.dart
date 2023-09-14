@@ -7,6 +7,7 @@ class IntroPageThree extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
+        color: Color(0xFF220D46),
         image: DecorationImage(
           image: AssetImage('assets/img/blur_purpel_light.png'),
           fit: BoxFit.cover,

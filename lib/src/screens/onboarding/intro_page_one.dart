@@ -7,6 +7,7 @@ class IntroPageOne extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
+        color: Color(0xFF220D46),
         image: DecorationImage(
           image: AssetImage('assets/img/blur_blue.png'),
           fit: BoxFit.cover,
