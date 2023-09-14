@@ -7,12 +7,13 @@ class IntroPageThree extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/img/blur_purpel_light.png'),
-          fit: BoxFit.cover,
-        ),
-      ),
+      color: const Color(0xFF220D46),
+      // decoration: const BoxDecoration(
+      //   image: DecorationImage(
+      //     image: AssetImage('assets/img/blur_purpel_light.png'),
+      //     fit: BoxFit.cover,
+      //   ),
+      // ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30.0),
         child: Stack(
