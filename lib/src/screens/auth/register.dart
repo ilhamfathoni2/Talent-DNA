@@ -152,7 +152,7 @@ class RegisterScreen extends StatelessWidget {
                         style: TextButton.styleFrom(
                             foregroundColor: Colors.white,
                             padding:
-                                const EdgeInsets.symmetric(vertical: 20.0)),
+                                const EdgeInsets.symmetric(vertical: 15.0)),
                         child: const Text(
                           'SIGN UP',
                           style: TextStyle(
