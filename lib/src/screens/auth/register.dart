@@ -132,38 +132,36 @@ class RegisterScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 20),
                     // Button "SIGN UP" -------------
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 17),
-                      child: Container(
-                        height: 50,
-                        width: width,
-                        decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(50)),
-                          gradient: LinearGradient(
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                              colors: [Color(0xFF11A8FF), Color(0xFFFF00FF)]),
-                        ),
-                        child: Center(
-                            child: TextButton(
-                          onPressed: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return const MainApp();
-                            }));
-                          },
-                          style: TextButton.styleFrom(
-                              foregroundColor: Colors.white,
-                              padding: const EdgeInsets.all(17)),
-                          child: const Text(
-                            'SIGN UP',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                        )),
+                    Container(
+                      height: 50,
+                      width: width,
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                        gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [Color(0xFF11A8FF), Color(0xFFFF00FF)]),
                       ),
+                      child: Center(
+                          child: TextButton(
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return const MainApp();
+                          }));
+                        },
+                        style: TextButton.styleFrom(
+                            foregroundColor: Colors.white,
+                            padding:
+                                const EdgeInsets.symmetric(vertical: 17.0)),
+                        child: const Text(
+                          'SIGN UP',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      )),
                     ),
                     const SizedBox(height: 20),
                     // Text Or Sign Up with ----------
