@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:lottie/lottie.dart';
 
 class IntroPageThree extends StatelessWidget {
   const IntroPageThree({super.key});
@@ -7,7 +6,12 @@ class IntroPageThree extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xFF220D46),
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/img/blur_purpel_light.png'),
+          fit: BoxFit.cover,
+        ),
+      ),
       child: const Padding(
         padding: EdgeInsets.symmetric(horizontal: 30.0),
         child: Stack(
@@ -19,11 +23,6 @@ class IntroPageThree extends StatelessWidget {
               crossAxisAlignment:
                   CrossAxisAlignment.center, // Menengahkan secara horizontal
               children: [
-                // Lottie.network(
-                //   'https://lottie.host/2fdc7ada-cdab-4f5c-b9b9-f322be0a91c8/cVB3qAgJOr.json',
-                //   height: 200, // Sesuaikan tinggi animasi sesuai kebutuhan Anda
-                //   width: 200, // Sesuaikan lebar animasi sesuai kebutuhan Anda
-                // ),
                 // Teks pertama
                 Padding(
                   padding: EdgeInsets.only(bottom: 20.0),
