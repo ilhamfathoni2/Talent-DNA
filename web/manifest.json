@@ -1,11 +1,11 @@
 {
-    "name": "talent_dna",
-    "short_name": "talent_dna",
+    "name": "Talent DNA",
+    "short_name": "Talent DNA",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Alat penilaian talenta dengan metode pengukuran ESQ untuk mengungkap potensi yang paling bersinar jauh di dalam hati Anda, membawa Anda menuju mentalitas tak tergoyahkan, stabilitas emosi dan kehidupan yang lebih bahagia.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
