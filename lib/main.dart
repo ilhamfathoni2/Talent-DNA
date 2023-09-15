@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:talent_dna/src/screens/auth/register.dart';
 import 'package:talent_dna/src/screens/dna/talent_dna.dart';
 import 'package:talent_dna/src/screens/history/history.dart';
 import 'package:talent_dna/src/screens/home/home.dart';

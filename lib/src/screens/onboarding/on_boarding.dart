@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:talent_dna/main.dart';
 import 'package:talent_dna/src/screens/auth/register.dart';
 import 'package:talent_dna/src/screens/onboarding/intro_page_one.dart';
 import 'package:talent_dna/src/screens/onboarding/intro_page_three.dart';
