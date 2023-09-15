@@ -42,11 +42,16 @@ class _ResgisterScreenStepTwoState extends State<ResgisterScreenStepTwo> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     // ---- Icon Back ----
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Image.asset(
-                        'assets/icons/icon_back.png',
-                        width: 16,
+                    InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Image.asset(
+                          'assets/icons/icon_back.png',
+                          width: 16,
+                        ),
                       ),
                     ),
                     const SizedBox(height: 20),
@@ -338,10 +343,10 @@ class _ResgisterScreenStepTwoState extends State<ResgisterScreenStepTwo> {
                                                     Radius.circular(12))),
                                       ),
                                     ),
+                                    const SizedBox(height: 16),
                                   ],
                                 ),
                               // ------- End Company Name ----------
-                              const SizedBox(height: 16),
                               // ------- Phone Number ----------
                               const Align(
                                 alignment: Alignment.centerLeft,
@@ -434,10 +439,10 @@ class _ResgisterScreenStepTwoState extends State<ResgisterScreenStepTwo> {
                                                     Radius.circular(12))),
                                       ),
                                     ),
+                                    const SizedBox(height: 16),
                                   ],
                                 ),
                               // ------- End NPWP ----------
-                              const SizedBox(height: 16),
                               // -------- Input Job Option --------
                               const Align(
                                 alignment: Alignment.centerLeft,
