@@ -60,15 +60,21 @@ class _MainApps extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: IndexedStack(
-        index: currentIndex,
-        children: const [
-          MyHomeScreen(),
-          ResultScreen(),
-          TalentDnaScreen(),
-          HistoryScreen(),
-          OrderScreen(),
-        ],
+      body: Align(
+        alignment: Alignment.center,
+        child: Container(
+          constraints: const BoxConstraints(maxWidth: 500),
+          child: IndexedStack(
+            index: currentIndex,
+            children: const [
+              MyHomeScreen(),
+              ResultScreen(),
+              TalentDnaScreen(),
+              HistoryScreen(),
+              OrderScreen(),
+            ],
+          ),
+        ),
       ),
       bottomNavigationBar: MyConvexAppBar(
         currentIndex: currentIndex,

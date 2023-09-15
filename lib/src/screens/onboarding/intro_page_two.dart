@@ -37,12 +37,15 @@ class IntroPageTwo extends StatelessWidget {
                   ),
                 ),
                 // Teks kedua
-                Text(
-                  'Lorem ipsum dolor sit amet consectetur. Amet',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.normal,
-                    color: Colors.white,
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Lorem ipsum dolor sit amet consectetur. Amet',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.normal,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ],

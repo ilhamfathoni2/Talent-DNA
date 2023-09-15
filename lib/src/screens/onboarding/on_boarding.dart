@@ -20,87 +20,94 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          PageView(
-            controller: _controller,
-            onPageChanged: (index) {
-              setState(() {
-                onLastPage = (index == 2);
-              });
-            },
-            children: const [
-              IntroPageOne(),
-              IntroPageTwo(),
-              IntroPageThree(),
+      body: Align(
+        alignment: Alignment.center,
+        child: Container(
+          constraints: const BoxConstraints(maxWidth: 500),
+          child: Stack(
+            children: [
+              PageView(
+                controller: _controller,
+                onPageChanged: (index) {
+                  setState(() {
+                    onLastPage = (index == 2);
+                  });
+                },
+                children: const [
+                  IntroPageOne(),
+                  IntroPageTwo(),
+                  IntroPageThree(),
+                ],
+              ),
+              Align(
+                alignment:
+                    const Alignment(0, 0.86), // Mengatur posisi di bagian bawah
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    SmoothPageIndicator(
+                      controller: _controller,
+                      count: 3,
+                      effect: const ExpandingDotsEffect(
+                        activeDotColor: Colors.white,
+                        dotColor: Color.fromARGB(74, 255, 255, 255),
+                        dotHeight: 8.0,
+                        dotWidth: 8.0,
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              _controller.jumpToPage(2);
+                            },
+                            child: const Text(
+                              'Skip',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700,
+                                  color: Color.fromARGB(140, 255, 255, 255)),
+                            ),
+                          ),
+                          onLastPage
+                              ? GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(context,
+                                        MaterialPageRoute(builder: (context) {
+                                      return const RegisterScreen();
+                                    }));
+                                  },
+                                  child: Image.asset(
+                                    'assets/icons/icon_next.png',
+                                    width: 60,
+                                    height: 60,
+                                  ))
+                              : GestureDetector(
+                                  onTap: () {
+                                    _controller.nextPage(
+                                      duration:
+                                          const Duration(milliseconds: 500),
+                                      curve: Curves.easeIn,
+                                    );
+                                  },
+                                  child: Image.asset(
+                                    'assets/icons/icon_next.png',
+                                    width: 60,
+                                    height: 60,
+                                  )),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
-          Align(
-            alignment:
-                const Alignment(0, 0.86), // Mengatur posisi di bagian bawah
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                SmoothPageIndicator(
-                  controller: _controller,
-                  count: 3,
-                  effect: const ExpandingDotsEffect(
-                    activeDotColor: Colors.white,
-                    dotColor: Color.fromARGB(74, 255, 255, 255),
-                    dotHeight: 8.0,
-                    dotWidth: 8.0,
-                  ),
-                ),
-                const SizedBox(height: 20),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          _controller.jumpToPage(2);
-                        },
-                        child: const Text(
-                          'Skip',
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w700,
-                              color: Color.fromARGB(140, 255, 255, 255)),
-                        ),
-                      ),
-                      onLastPage
-                          ? GestureDetector(
-                              onTap: () {
-                                Navigator.push(context,
-                                    MaterialPageRoute(builder: (context) {
-                                  return const RegisterScreen();
-                                }));
-                              },
-                              child: Image.asset(
-                                'assets/icons/icon_next.png',
-                                width: 60,
-                                height: 60,
-                              ))
-                          : GestureDetector(
-                              onTap: () {
-                                _controller.nextPage(
-                                  duration: const Duration(milliseconds: 500),
-                                  curve: Curves.easeIn,
-                                );
-                              },
-                              child: Image.asset(
-                                'assets/icons/icon_next.png',
-                                width: 60,
-                                height: 60,
-                              )),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }

@@ -20,12 +20,15 @@ class _ResgisterScreenStepTwoState extends State<ResgisterScreenStepTwo> {
     return Scaffold(
       body: Stack(
         children: [
-          Container(
-            constraints: const BoxConstraints(maxWidth: 500),
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/img/background_splash_screen.png'),
-                fit: BoxFit.cover,
+          Align(
+            alignment: Alignment.center,
+            child: Container(
+              constraints: const BoxConstraints(maxWidth: 500),
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/img/background_splash_screen.png'),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ),
