@@ -30,6 +30,7 @@ class _ResgisterScreenStepTwoState extends State<ResgisterScreenStepTwo> {
             ),
           ),
           SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
             child: Align(
               alignment: Alignment.center,
               child: Container(
@@ -241,10 +242,10 @@ class _ResgisterScreenStepTwoState extends State<ResgisterScreenStepTwo> {
                                           begin: Alignment.topCenter,
                                           end: Alignment.bottomCenter,
                                           colors: [
-                                            Color.fromARGB(255, 79, 3, 185),
-                                            Color.fromARGB(255, 226, 207, 255)
+                                            Color(0xFF4703A6),
+                                            Color(0xFFDFC9FF)
                                           ]),
-                                      width: 1,
+                                      width: 2,
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(12))),
                                 ),
@@ -284,10 +285,10 @@ class _ResgisterScreenStepTwoState extends State<ResgisterScreenStepTwo> {
                                           begin: Alignment.topCenter,
                                           end: Alignment.bottomCenter,
                                           colors: [
-                                            Color.fromARGB(255, 79, 3, 185),
-                                            Color.fromARGB(255, 226, 207, 255)
+                                            Color(0xFF4703A6),
+                                            Color(0xFFDFC9FF)
                                           ]),
-                                      width: 1,
+                                      width: 2,
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(12))),
                                 ),
@@ -333,12 +334,10 @@ class _ResgisterScreenStepTwoState extends State<ResgisterScreenStepTwo> {
                                                     begin: Alignment.topCenter,
                                                     end: Alignment.bottomCenter,
                                                     colors: [
-                                                      Color.fromARGB(
-                                                          255, 79, 3, 185),
-                                                      Color.fromARGB(
-                                                          255, 226, 207, 255)
+                                                      Color(0xFF4703A6),
+                                                      Color(0xFFDFC9FF)
                                                     ]),
-                                                width: 1,
+                                                width: 2,
                                                 borderRadius: BorderRadius.all(
                                                     Radius.circular(12))),
                                       ),
@@ -380,10 +379,10 @@ class _ResgisterScreenStepTwoState extends State<ResgisterScreenStepTwo> {
                                           begin: Alignment.topCenter,
                                           end: Alignment.bottomCenter,
                                           colors: [
-                                            Color.fromARGB(255, 79, 3, 185),
-                                            Color.fromARGB(255, 226, 207, 255)
+                                            Color(0xFF4703A6),
+                                            Color(0xFFDFC9FF)
                                           ]),
-                                      width: 1,
+                                      width: 2,
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(12))),
                                 ),
@@ -429,12 +428,10 @@ class _ResgisterScreenStepTwoState extends State<ResgisterScreenStepTwo> {
                                                     begin: Alignment.topCenter,
                                                     end: Alignment.bottomCenter,
                                                     colors: [
-                                                      Color.fromARGB(
-                                                          255, 79, 3, 185),
-                                                      Color.fromARGB(
-                                                          255, 226, 207, 255)
+                                                      Color(0xFF4703A6),
+                                                      Color(0xFFDFC9FF)
                                                     ]),
-                                                width: 1,
+                                                width: 2,
                                                 borderRadius: BorderRadius.all(
                                                     Radius.circular(12))),
                                       ),
@@ -476,10 +473,10 @@ class _ResgisterScreenStepTwoState extends State<ResgisterScreenStepTwo> {
                                           begin: Alignment.topCenter,
                                           end: Alignment.bottomCenter,
                                           colors: [
-                                            Color.fromARGB(255, 103, 0, 248),
-                                            Color.fromARGB(255, 226, 207, 255)
+                                            Color(0xFF4703A6),
+                                            Color(0xFFDFC9FF)
                                           ]),
-                                      width: 1,
+                                      width: 2,
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(12))),
                                 ),
@@ -541,10 +538,10 @@ class _ResgisterScreenStepTwoState extends State<ResgisterScreenStepTwo> {
                                           begin: Alignment.topCenter,
                                           end: Alignment.bottomCenter,
                                           colors: [
-                                            Color.fromARGB(255, 79, 3, 185),
-                                            Color.fromARGB(255, 226, 207, 255)
+                                            Color(0xFF4703A6),
+                                            Color(0xFFDFC9FF)
                                           ]),
-                                      width: 1,
+                                      width: 2,
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(12))),
                                 ),
@@ -584,10 +581,10 @@ class _ResgisterScreenStepTwoState extends State<ResgisterScreenStepTwo> {
                                           begin: Alignment.topCenter,
                                           end: Alignment.bottomCenter,
                                           colors: [
-                                            Color.fromARGB(255, 79, 3, 185),
-                                            Color.fromARGB(255, 226, 207, 255)
+                                            Color(0xFF4703A6),
+                                            Color(0xFFDFC9FF)
                                           ]),
-                                      width: 1,
+                                      width: 2,
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(12))),
                                 ),
