@@ -3,8 +3,22 @@ import 'package:gradient_borders/gradient_borders.dart';
 import 'package:talent_dna/main.dart';
 import 'package:talent_dna/src/screens/auth/register_step_two.dart';
 
-class RegisterScreen extends StatelessWidget {
+class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
+
+  @override
+  State<RegisterScreen> createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+  bool _passwordVisible = false;
+  final TextEditingController _passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    _passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +64,7 @@ class RegisterScreen extends StatelessWidget {
                           Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Lorem ipsum dolor sit amet consectetur.,',
+                              'Sign up for access all features and find your talent.',
                               style:
                                   TextStyle(color: Colors.white, fontSize: 18),
                             ),
@@ -107,15 +121,16 @@ class RegisterScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 8),
-                      const TextField(
-                        obscureText: true,
+                      TextField(
+                        controller: _passwordController,
+                        obscureText: _passwordVisible,
                         decoration: InputDecoration(
                           hintText: 'Password',
-                          fillColor: Color.fromARGB(149, 71, 3, 166),
+                          fillColor: const Color.fromARGB(149, 71, 3, 166),
                           filled: true,
-                          contentPadding: EdgeInsets.all(12.0),
-                          hintStyle: TextStyle(color: Colors.white),
-                          border: GradientOutlineInputBorder(
+                          contentPadding: const EdgeInsets.all(12.0),
+                          hintStyle: const TextStyle(color: Colors.white),
+                          border: const GradientOutlineInputBorder(
                               gradient: LinearGradient(
                                   begin: Alignment.topCenter,
                                   end: Alignment.bottomCenter,
@@ -126,7 +141,7 @@ class RegisterScreen extends StatelessWidget {
                               width: 1,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(12))),
-                          focusedBorder: GradientOutlineInputBorder(
+                          focusedBorder: const GradientOutlineInputBorder(
                               gradient: LinearGradient(
                                   begin: Alignment.topCenter,
                                   end: Alignment.bottomCenter,
@@ -137,8 +152,22 @@ class RegisterScreen extends StatelessWidget {
                               width: 2,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(12))),
+                          suffixIcon: GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                _passwordVisible = !_passwordVisible;
+                              });
+                            },
+                            child: Icon(
+                              _passwordVisible
+                                  ? Icons.visibility
+                                  : Icons.visibility_off,
+                              color: Colors.white,
+                              size: 18,
+                            ),
+                          ),
                         ),
-                        style: TextStyle(color: Colors.white),
+                        style: const TextStyle(color: Colors.white),
                       ),
                       const SizedBox(height: 20),
                       // Button "SIGN UP" -------------
